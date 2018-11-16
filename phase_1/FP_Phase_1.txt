@@ -1,0 +1,107 @@
+﻿Final Project Phase 1
+Meena Reddy & Julian Dorsey
+601.315
+
+
+1. Team Members: Julian Dorsey & Meena Reddy
+2. Target domain: a database of music reviews/chart rankings (sourced from Billboard and Pitchfork)
+3. Questions to Answer:
+   1. Billboard: 
+      1. According to Billboard, who is the most popular artist of each decade?
+      2. Which artist has the highest average song ranking on the Billboard Hot 100?
+      3. For each decade, which artist was featured the most times on the Hot 100? 
+      4. What is the most commonly used word amongst song titles of Hot 100 songs?
+   1. Pitchfork: 
+      1. Which artist has the highest/lowest average rating on Pitchfork?
+      2. Which genre has the highest/lowest average review rating on Pitchfork for each year?
+      3. What was the change in average rating for pop albums from 1980 to 2015?
+      4. What is the average album rating given by each reviewer?
+      5. What is the average rating for “Best New Music” songs/albums compared to music that was not “Best New Music?”’
+   1. Combined: 
+      1. How many songs that charted above 50 on the Billboard rankings received scores above 7 on Pitchfork?
+      2. Which contributor best predicted how an album’s songs would chart? Assume that a score above 7 is a marker of an album’s quality. 
+      3. Return all the songs that were awarded ‘Best New Music’ and also charted on Billboard. 
+   1. NLP/data science: 
+      1. What is the average ranking for songs about ‘love’ compared to songs not about love? 
+      2. Is the Pitchfork review consistent with the numerical score (using some sentiment analysis scheme)? 
+      3. Based on a song’s genre and its Pitchfork rating, can we predict how it will chart on Billboard?
+
+
+1.  
+
+
+
+
+
+
+
+
+
+
+
+
+SONGS
+SongID
+	Title
+	Artist
+	Lyrics
+	0001
+	Baby
+	Justin Bieber
+	baby, baby, baby
+	
+
+
+
+RANKING
+SongID
+	Year
+	Rank
+	0001
+	2010
+	07
+	
+
+
+
+ALBUMSONGS
+SongID
+	AlbumID
+	0001
+	5555
+	
+
+ALBUM
+AlbumID
+	Title
+	Year
+	Artist
+	Genre 
+	Label
+	5555
+	My World 2.0
+	2010
+	Justin Bieber
+	Pop
+	Island 
+	
+
+REVIEW
+AlbumID
+	Rating
+	Reviewer
+	ReviewText
+	5555
+	6.5
+	John Smith
+	“This is great”
+	
+
+        
+1. Loading database with values: 
+   1. We will obtain Billboard data from: https://www.kaggle.com/rakannimer/billboard-lyrics
+   2. We will obtain Pitchfork data from https://www.kaggle.com/nolanbconaway/pitchfork-data/version/1
+   3. These are both .csv files, which can be easily imported into mySQL using Workbench or a similar tool. 
+   4. We will need to find a way to correlate the song (on Billboard) with its album, and are looking into solutions for this. 
+1. We will have pre-formatted inputs through which the user can submit parameters for various queries, and will display the results as views or tables. 
+2. We plan to focus on data mining, including basic machine learning and natural language processing and will also touch on data presentation using Python libraries.
